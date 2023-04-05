@@ -192,6 +192,28 @@
   left: 80%;
   animation: animate 9s linear infinite;
 }
+
+body {
+  background: #e8cbc0;
+  background: -webkit-linear-gradient(to bottom, #aeaeae, #f1c75d);
+  background: linear-gradient(to bottom, #acacac, #eea546);
+  min-height: 100vh;
+}
+
+div.bg-white {
+  height: 450px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.bg-white img {
+  object-fit: cover;
+  height: 200px;
+  width: 200px;
+}
+
 @keyframes animate {
   0% {
     transform: scale(0) translateY(0) rotate(70deg);
