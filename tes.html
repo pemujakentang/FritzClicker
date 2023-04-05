@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Randomly Bouncing Ball</title>
+    <style>
+        #ball {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: red;
+            position: absolute;
+        }
+        #container {
+            width: 90%;
+            height:7rem;
+            border: 1px solid black;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="ball"></div>
+    </div>
+
+    <script>
+        function getcontainerdimensions(){
+        var containerWidth = container.offsetWidth;
+        var containerHeight = container.offsetHeight;
+        }
+        setInterval(getcontainerdimensions, 100)
+        var ball = document.getElementById('ball');
+        var container = document.getElementById('container');
+        var containerWidth = container.offsetWidth;
+        var containerHeight = container.offsetHeight;
+        var ballWidth = ball.offsetWidth;
+        var ballHeight = ball.offsetHeight;
+        var x = Math.random() * (containerWidth - ballWidth);
+        var y = Math.random() * (containerHeight - ballHeight);
+        var dx = 2;
+        var dy = 2;
+        function getcontainerdimensions(){
+        var containerWidth = container.offsetWidth;
+        var containerHeight = container.offsetHeight;
+        }
+        setInterval(getcontainerdimensions, 100)
+
+        function animateBall() {
+            x += dx;
+            y += dy;
+
+            if (x < 0 || x + ballWidth > containerWidth) {
+                dx = -dx;
+            }
+            if (y < 0 || y + ballHeight > containerHeight) {
+                dy = -dy;
+            }
+
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+
+            requestAnimationFrame(animateBall);
+        }
+
+        animateBall();
+    </script>
+</body>
+</html>
