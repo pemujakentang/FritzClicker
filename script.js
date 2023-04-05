@@ -43,8 +43,8 @@ const viewCostAdd = document.getElementById("costAdd")
 const containerSpam = document.getElementById("containerSpam")
 
 
-mainBtn.addEventListener("click", function(){
-    incMoney
+mainBtn.addEventListener("click", function () {
+    incMoney()
     var audio = new Audio("assets/audio/towewew.mp3")
     audio.play()
 })
@@ -58,23 +58,23 @@ ftzNormal.addEventListener("click", function () {
         viewCostNormal.innerText = `${costNormal} Duit`
         normalCount.innerText = `Fritzer: ${clickerNormalCount}`
         var newFritz = document.createElement("img")
-        newFritz.src = "assets/omfritz.png"
+        newFritz.src = "assets/fritzsma.png"
         newFritz.style.width = "5rem"
         newFritz.style.height = "5rem"
         containerSpam.appendChild(newFritz)
-    }else{
+    } else {
         alert("Duit ga cukup masseh")
     }
 })
 
-function checkNormalCost(){
-    if (money<costNormal) {
+function checkNormalCost() {
+    if (money < costNormal) {
         viewCostNormal.style.color = "red"
-    }else{
+    } else {
         viewCostNormal.style.color = "black"
     }
 }
-setInterval(checkNormalCost,100)
+setInterval(checkNormalCost, 100)
 
 ftzUltra.addEventListener("click", function () {
     if (money >= costUltra) {
@@ -85,7 +85,7 @@ ftzUltra.addEventListener("click", function () {
         viewCostUltra.innerText = `${costUltra} Duit`
         ultraCount.innerText = `Fritzer Ultra: ${clickerUltraCount}`
         var newFritz = document.createElement("img")
-        newFritz.src = "assets/omfritz.png"
+        newFritz.src = "assets/fritzoren.png"
         newFritz.style.width = "5rem"
         newFritz.style.height = "5rem"
         containerSpam.appendChild(newFritz)
@@ -112,7 +112,7 @@ ftzOm.addEventListener("click", function () {
         viewCostOm.innerText = `${costOm} Duit`
         omCount.innerText = `Om Fritz: ${clickerOmCount}`
         var newFritz = document.createElement("img")
-        newFritz.src = "assets/omfritz.png"
+        newFritz.src = "assets/fritzitem.png"
         newFritz.style.width = "5rem"
         newFritz.style.height = "5rem"
         containerSpam.appendChild(newFritz)
@@ -133,14 +133,21 @@ setInterval(checkOmCost, 100)
 
 
 addFritz.addEventListener("click", function () {
-    if (money>=costAdd) {
+    if (money >= costAdd) {
         extraCount++
         addMoney++
-        money-= costAdd
+        money -= costAdd
         viewMoney.innerText = money
         costAdd *= 1.5
         viewCostAdd.innerText = `${costAdd} Duit`
         fritzCount.innerText = `Extra Fritz: ${extraCount}`
+        var newFritz = document.createElement("img")
+        newFritz.src = "assets/omfritz.png"
+        newFritz.style.width = "5rem"
+        newFritz.style.height = "5rem"
+        containerSpam.appendChild(newFritz)
+    } else {
+        alert("Duit ga cukup masseh")
     }
 })
 
@@ -176,3 +183,18 @@ function clickerOmMoney() {
 }
 setInterval(clickerOmMoney, interval)
 
+var blitzFritz = document.getElementById("frtBlitz")
+
+blitzFritz.addEventListener("click", function () {
+    var i = 60
+    function countDown() {
+        blitzFritz.disabled = true
+        blitzFritz.innerText = `Blitz Fritz ${i}`
+        i--
+        if (i == 0) {
+            clearInterval(countDown)
+            blitzFritz.disabled = false
+        }
+    }
+    setInterval(countDown, 1000)
+})
