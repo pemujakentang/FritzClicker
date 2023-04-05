@@ -37,3 +37,4 @@ Clicker Game untuk keperluan UTS PTI Lab haha hihi huhu hehe hoho
 - Background music seharusnya berjalan otomatis, namun hal itu tergantung browser. Beberapa browser tidak bisa menjalankan bgm secara otomatis.
 - Om Fritz adalah maskot kami
 - Github men-detect 88% bahasa yang digunakan CSS karena ada nes.css, file css custom local dan bukan diimport untuk mengantisipasi tidak adanya koneksi internet. Sayangnya font tidak bisa local dan harus tetap import dari googlefonts
+- Harap menyesuaikan page zoom agar optimal.
