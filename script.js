@@ -30,7 +30,7 @@ const fritzCount = document.getElementById("fritzCount")
 
 var costNormal = 25
 var costUltra = 200
-var costOm = 1000
+var costOm = 500
 
 const viewCostNormal = document.getElementById("costNormal")
 const viewCostUltra = document.getElementById("costUltra")
