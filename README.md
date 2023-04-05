@@ -1,6 +1,6 @@
 # [FritzClicker](https://github.com/pemujakentang/FritzClicker)
 Clicker Game untuk keperluan UTS PTI Lab haha hihi huhu hehe hoho
-##Kelas B/Kelompok 3
+## Kelas B/Kelompok 3
 
 ### Dev Team
 - Bonifasius Martin Wibawa/[Martin/Bonbon](https://github.com/pemujakentang) (00000068324)
