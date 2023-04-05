@@ -247,6 +247,7 @@ masukSurga.addEventListener("click", function () {
             i--
             if (i<0) {
                 location.href = 'https://www.youtube.com/watch?v=hvL1339luv0'
+                masukSurga.disabled = false
                 clearInterval(delayInterval)
             }
         }
